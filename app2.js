@@ -69,6 +69,8 @@ client.addListener('error', function(message) {
     console.log('error: ', message);
 });
 
+app.use(express.favicon(path.join(__dirname, 'public/favicon.ico')));
+
 app.get('/', function(req, res){
   var fullList="";
   var x,y;
