@@ -1,6 +1,7 @@
 var irc = require('irc');
 var moment = require('moment');
 var fs = require('fs');
+var path = require('path');
 
 var client = new irc.Client('chat.freenode.net', 'g4k_', {
     channels: ['#node.js', '#angularjs', '#testtesttest', '#hackerbeach' ],
