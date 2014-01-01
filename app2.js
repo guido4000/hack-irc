@@ -76,7 +76,7 @@ app.get('/', function(req, res){
   
   redisclient.hgetall("#hackerbeach", function (err, obj) {
     
-    Object.keys(obj).reverse().forEach(function(stamp){
+    Object.keys(obj).sort().reverse().forEach(function(stamp){
       y = JSON.parse(obj[stamp]);
       y.message = y.message.replace(/</g, "");
       fullList += chatLine( myDate(stamp.toString()), y.from, y.message);
